@@ -39,7 +39,7 @@ let successMessage = ref('')
 const handleSubmit = async () => {
   try {
     const response = await axios.post(
-      `${import.meta.env.VITE_API_URL}/api/auth/confirm-email/`,
+      `https://goldboost.demodev.cc/api/auth/confirm-email/`,
       {
         uidb64: route.params.uidb64,
         token: route.params.token

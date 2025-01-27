@@ -21,7 +21,7 @@ const isLoading = ref(true)
 const getTabContent = async (id) => {
   try {
     const response = await axios.get(
-      `${import.meta.env.VITE_API_URL}/api/products/tab-content/${id}/`,
+      `https://goldboost.demodev.cc/api/products/tab-content/${id}/`,
       {
         headers: {
           'Accept-Language': Trans.currentLocale

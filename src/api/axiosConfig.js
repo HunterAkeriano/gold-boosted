@@ -12,7 +12,7 @@ let requestCount = 0
 let lastRequestTime = 0
 
 export const axiosInstance = axios.create({
-  baseURL: import.meta.env.VITE_API_URL,
+  baseURL: 'https://goldboost.demodev.cc',
   withCredentials: true,
   headers: {
     'Accept-Language': Trans.currentLocale

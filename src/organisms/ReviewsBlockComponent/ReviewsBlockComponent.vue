@@ -67,7 +67,7 @@ const [emblaReviewsRef, emblaApi] = emblaCarouselVue({
 const fetchData = async (pageSize, currentPage) => {
   try {
     await axios
-      .get(`${import.meta.env.VITE_API_URL}/api/main/reviews/`, {
+      .get(`https://goldboost.demodev.cc/api/main/reviews/`, {
         params: {
           page: currentPage,
           page_size: pageSize

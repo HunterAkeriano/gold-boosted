@@ -19,7 +19,7 @@ import Trans from '@/plugins/i18n/translation'
 import { auth, log } from '@/middleware/auth.js'
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.VITE_BASE_URL),
+  history: createWebHistory('/'),
   routes: [
     {
       path: '/:locale?',

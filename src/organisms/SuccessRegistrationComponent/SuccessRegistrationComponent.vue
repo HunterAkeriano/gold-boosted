@@ -29,7 +29,7 @@ const handleSubmit = async () => {
   console.log('send')
   try {
     await axios.get(
-      `${import.meta.env.VITE_API_URL}/api/auth/confirm-email/${route.params.uidb64}/${route.params.token}`
+      `https://goldboost.demodev.cc/api/auth/confirm-email/${route.params.uidb64}/${route.params.token}`
     )
     active.value = true
   } catch (error) {

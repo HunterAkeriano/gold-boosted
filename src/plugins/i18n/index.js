@@ -45,7 +45,7 @@ const getLanguageFromUrl = () => {
 
 export default createI18n({
   locale: getLanguageFromUrl(),
-  fallbackLocale: import.meta.env.VITE_FALLBACK_LOCALE,
+  fallbackLocale: 'ua',
   legacy: false,
   datetimeFormats: datetimeFormats,
   globalInjection: true,

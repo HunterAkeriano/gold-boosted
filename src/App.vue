@@ -25,7 +25,7 @@ let siteLinks = {}
 
 const getSiteLinks = async () => {
   try {
-    const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/main/settings/`, {
+    const response = await axios.get(`https://goldboost.demodev.cc/api/main/settings/`, {
       headers: {
         'Accept-Language': Trans.currentLocale
       }

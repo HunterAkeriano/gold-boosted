@@ -50,7 +50,7 @@ const password = ref('')
 const handleSubmit = async () => {
   console.log('send')
   try {
-    const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/users/registration/`, {
+    const response = await axios.post(`https://goldboost.demodev.cc/api/users/registration/`, {
       email: email.value,
       password: password.value,
       notify_me: true

@@ -67,7 +67,7 @@ const activeGameId = ref()
 const getGameProducts = async (pageSize, currentPage, activeGameId) => {
   try {
     const response = await axios.get(
-      `${import.meta.env.VITE_API_URL}/api/games/product-carousels/`,
+      `https://goldboost.demodev.cc/api/games/product-carousels/`,
       {
         params: {
           page: currentPage.value,

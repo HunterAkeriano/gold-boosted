@@ -109,7 +109,7 @@ const [email, emailAttrs] = defineField('email')
 const [password, passwordAttrs] = defineField('password')
 const signIn = async (email, password) => {
   try {
-    const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/token/pair`, {
+    const response = await axios.post(`https://goldboost.demodev.cc/api/token/pair`, {
       email,
       password
     })

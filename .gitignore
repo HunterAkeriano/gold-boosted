@@ -31,5 +31,3 @@ storybook-static
 *.sw?
 
 *.tsbuildinfo
-.env
-.env

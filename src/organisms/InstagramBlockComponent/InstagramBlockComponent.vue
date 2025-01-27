@@ -69,7 +69,7 @@ let listImages
 
 const getInstagramImages = async () => {
   try {
-    const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/main/instagram/`, {
+    const response = await axios.get(`https://goldboost.demodev.cc/api/main/instagram/`, {
       headers: {
         'Accept-Language': Trans.currentLocale
       }

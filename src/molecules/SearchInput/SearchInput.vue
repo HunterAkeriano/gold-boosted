@@ -50,7 +50,7 @@ const isLoading = ref()
 const getSearchResultList = async (searchInputValue) => {
   try {
     if (!/^[a-zA-Z\s]+$/.test(searchInputValue)) {
-      const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/products/search/`, {
+      const response = await axios.get(`https://goldboost.demodev.cc/api/products/search/`, {
         params: {
           search_line: searchInputValue
         },
@@ -63,7 +63,7 @@ const getSearchResultList = async (searchInputValue) => {
       return
     }
 
-    const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/products/search/`, {
+    const response = await axios.get(`https://goldboost.demodev.cc/api/products/search/`, {
       params: {
         search_line: searchInputValue
       },

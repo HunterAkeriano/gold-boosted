@@ -35,7 +35,7 @@ const isLoading = true
 
 const fetchResultData = async () => {
   try {
-    const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/games/`)
+    const response = await axios.get(`https://goldboost.demodev.cc/api/games/`)
     searchResultData.value = response.data
     isLoading.value = false
     console.log(response)
