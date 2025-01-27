@@ -1,0 +1,30 @@
+@import '@/assets/styles/base/variables';
+
+.language-dropdown {
+  max-width: 130px;
+  width: max-content;
+
+  &__flag {
+    width: 35px;
+    height: 22px;
+    object-fit: cover;
+  }
+
+  &__option {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    padding: 8px 15px;
+    color: $white-color;
+    cursor: pointer;
+
+    &_select {
+      background: $dark-blue-gray-color;
+      cursor: default;
+    }
+  }
+
+  &__selected-language {
+    margin-left: 10px;
+  }
+}

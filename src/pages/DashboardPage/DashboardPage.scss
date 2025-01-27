@@ -1,0 +1,49 @@
+@import '@/assets/styles/base/variables';
+@import '@/assets/styles/base/mixins';
+
+.dashboard-page {
+  position: relative;
+
+
+  .tabs-component__header{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1210px;
+    width: 100%;
+    border-bottom: none;
+
+    @include media-breakpoint-down(md){
+      border-bottom: 1px solid rgba($color: $white-color, $alpha: 10%);
+    }
+
+    .tabs-component__header-embla{
+      border-bottom: 1px solid rgba($color: $white-color, $alpha: 10%);
+
+      @include media-breakpoint-down(md){
+        border-bottom: none;
+      }
+    }
+  }
+
+  &__overflow{
+    padding-top: 40px;
+    padding-bottom: 100px;
+    overflow: hidden;
+
+    @include media-breakpoint-down(md){
+      padding-bottom: 66px;
+    }
+  }
+
+  &__title {
+    margin-top: 50px;
+
+    @include page-title
+  }
+
+  &__tabs {
+    margin-top: 50px;
+  }
+}

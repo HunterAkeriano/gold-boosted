@@ -1,0 +1,95 @@
+@import '@/assets/styles/base/variables';
+
+.link {
+  display: flex;
+  align-items: baseline;
+  width: fit-content;
+  color: $white-color;
+  font-family: $font-family;
+  font-size: 16px;
+  font-weight: 500;
+
+  &_gradient {
+    background: $default-gradient-color;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: $transparent-color;
+
+    &:hover {
+      opacity: 50%;
+    }
+  }
+
+  &_underline {
+    color: rgba($color: $white-color, $alpha: 40%);
+    text-decoration-line: underline;
+
+    &-gradient {
+      position: relative;
+      text-shadow: 0 10px 15px rgba($color: $black-color, $alpha: 30%);
+      background: $default-gradient-color;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: $transparent-color;
+      text-transform: uppercase;
+      letter-spacing: 0.7px;
+      font-size: 14px;
+      font-weight: 700;
+
+      &:before {
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        content: '';
+        background: $default-gradient-color;
+      }
+    }
+
+    &:hover,
+    &:active {
+      text-decoration-line: underline;
+    }
+  }
+
+  &_regular {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  svg {
+    max-width: 16px;
+    max-height: 16px;
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin-right: 12px;
+    fill: $white-color;
+
+    use {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &:hover {
+    color: $amber-color;
+
+    svg {
+      fill: $amber-color;
+    }
+  }
+
+  &:active {
+    color: $amber-color;
+    opacity: 100%;
+    scale: 95%;
+
+    svg {
+      fill: $amber-color;
+    }
+  }
+}

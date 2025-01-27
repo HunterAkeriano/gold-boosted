@@ -1,0 +1,92 @@
+@import '@/assets/styles/base/variables';
+@import '@/assets/styles/base/mixins';
+
+.profile {
+  &__email-table {
+    gap: 60px;
+
+    &-title {
+      color: rgba($color: $white-color, $alpha: 30%);
+      font-family: $font-family;
+      font-size: 14px;
+      font-weight: 400;
+      text-align: left;
+      padding-bottom: 15px;
+
+      &:not(:first-child) {
+        padding-left: 60px;
+      }
+    }
+
+    &-value {
+      color: rgba($color: $white-color, $alpha: 60%);
+      font-family: $font-family;
+      font-size: 16px;
+      font-weight: 600;
+
+      &:not(:first-child) {
+        padding-left: 60px;
+      }
+    }
+  }
+
+  &__user-info {
+    max-width: 580px;
+    padding-bottom: 35px;
+    border-bottom: 1px solid rgba($color: $white-color, $alpha: 10%);
+
+  }
+
+  &__payments-methods {
+    max-width: 580px;
+    padding-bottom: 35px;
+    border-bottom: 1px solid rgba($color: $white-color, $alpha: 10%);
+  }
+
+  &__communication-channels {
+    max-width: 580px;
+    padding-bottom: 35px;
+    border-bottom: 1px solid rgba($color: $white-color, $alpha: 10%);
+  }
+
+  &__checkbox {
+    margin-top: 25px;
+    max-width: 580px;
+    min-height: 16px;
+  }
+
+  &__payments-list {
+    margin-top: 22px;
+  }
+
+  &__channels-list {
+    margin-top: 25px;
+  }
+
+  &__title {
+    margin-top: 40px;
+    color: $white-color;
+    font-family: $font-family;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  &__button {
+    margin-top: 60px;
+    max-width: 290px;
+    min-width: 230px;
+    min-height: 50px;
+    width: 100%;
+
+    @include media-breakpoint-down(md){
+      margin-top: 40px;
+    }
+  }
+
+  &__checkbox-text {
+    color: rgba($color: $white-color, $alpha: 70%);
+    font-family: $font-family;
+    font-size: 16px;
+    font-weight: 400;
+  }
+}

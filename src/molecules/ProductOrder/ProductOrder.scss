@@ -1,0 +1,204 @@
+@import "@/assets/styles/base/variables";
+@import "@/assets/styles/base/mixins";
+
+.product-order{
+  display: inline-flex;
+  width: 280px;
+  border-radius: 5px;
+  position: relative;
+  flex-direction: column;
+  background: $dark-gray-blue-color;
+  padding: 10px;
+
+  &__game-logo-block{
+    top: 15px;
+    left: 15px;
+    position: absolute;
+  }
+
+  &__name-block{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+  }
+
+  &__name{
+    font-family: $font-family;
+    font-weight: 600;
+    font-size: 18px;
+    color: $white-color;
+  }
+
+  &__type{
+    font-family: $font-family;
+    font-weight: 500;
+    font-size: 16px;
+    color: $fee-yellow;
+  }
+
+  &__attributes{
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__attribute{
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+    width: 100%;
+
+    &-title{
+      font-family: $font-family;
+      font-weight: 400;
+      font-size: 16px;
+      color: rgba($color: $white-color, $alpha: 50%);
+    }
+
+    &-value{
+      font-family: $font-family;
+      font-weight: 600;
+      font-size: 16px;
+      color: $white-color;
+
+
+    }
+  }
+
+  &__delete-button{
+    max-width: 20px;
+    max-height: 20px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    border-radius: 5px;
+
+    &:before, &:after{
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      height: 2px;
+      background: $white-color;
+    }
+
+    &:before{
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    &:after{
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+  }
+
+  &__total{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__quantity{
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+
+    &-title{
+      font-family: $font-family;
+      font-weight: 400;
+      font-size: 16px;
+      color: rgba($color: $white-color, $alpha: 50%);
+    }
+
+    &-value{
+      font-family: $font-family;
+      font-weight: 400;
+      font-size: 16px;
+      color: rgba($color: $white-color, $alpha: 50%);
+    }
+  }
+
+  &__bonus{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+
+    &-title{
+      font-family: $font-family;
+      font-weight: 400;
+      font-size: 16px;
+      color: rgba($color: $white-color, $alpha: 50%);
+    }
+
+    &-icon-value{
+      display: flex;
+      gap: 5px;
+      align-items: center;
+      font-family: $font-family;
+      font-weight: 600;
+      font-size: 16px;
+      color: $white-color;
+    }
+
+    &-icon{
+      align-self: center;
+    }
+  }
+
+  &__price{
+    justify-content: space-between;
+    display: flex;
+    gap: 5px;
+
+
+    &-title{
+      grid-area: title;
+      align-self: center;
+      font-family: $font-family;
+      font-weight: 600;
+      font-size: 18px;
+      text-transform: uppercase;
+      color: $white-color;
+    }
+
+    &-current{
+      grid-area: current;
+      align-self: center;
+      font-family: $font-family;
+      font-weight: 600;
+      font-size: 22px;
+      color: $fee-yellow;
+    }
+
+    &-last{
+      grid-area: last;
+      justify-self: center;
+      font-family: $font-family;
+      font-weight: 500;
+      font-size: 10px;
+      text-decoration-line: line-through;
+      color: rgba($color: $white-color, $alpha: 30%);
+    }
+
+    &-discount{
+      grid-area: discount;
+      justify-self: center;
+      display: block;
+      padding: 2px;
+      border-radius: 10px;
+      font-family: $font-family;
+      font-weight: 600;
+      font-size: 10px;
+      color: $deep-midnight-blue-color;
+      background: $fee-yellow;
+
+    }
+  }
+
+  &:not(:first-child){
+    border-top: 1px solid rgba($color: $white-color, $alpha: 10%);
+  }
+}

@@ -1,0 +1,137 @@
+@import '@/assets/styles/base/variables';
+@import '@/assets/styles/base/mixins';
+
+.popup {
+  padding: 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  min-height: 100vh;
+  height: 100vh;
+  overflow: auto;
+  z-index: 11;
+  display: none;
+
+  @include media-breakpoint-down(md) {
+    padding: 0;
+  }
+
+  &__show {
+    display: block;
+  }
+
+  &__outside {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+  }
+
+  &__inner {
+    margin-top: auto;
+    margin-bottom: auto;
+    height: fit-content;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    flex: 100%;
+    flex-grow: 1;
+    justify-content: space-between;
+  }
+
+  &__block {
+    display: flex;
+    width: fit-content;
+    height: 100%;
+    margin: auto;
+    min-height: fit-content;
+    @include media-breakpoint-down(xs) {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+
+
+  &__container {
+    margin: auto;
+    height: fit-content;
+    width: 100%;
+    min-height: max-content;
+    border-radius: 5px;
+    background: $midnight-blue-color;
+    padding: 15px;
+    display: flex;
+    flex: 100%;
+    flex-direction: column;
+    z-index: 1;
+
+    @include media-breakpoint-down(xs) {
+      width: 100%;
+      height: 100%;
+      border-radius: 0;
+      overflow: auto;
+    }
+  }
+
+  &__close-button {
+    position: relative;
+    margin-left: auto;
+    width: 20px;
+    min-height: 20px;
+    background: none;
+    transition: transform 0.3s ease;
+
+    &:before,
+    &:after {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      content: '';
+      background: $gray-color;
+      width: 100%;
+      height: 2px;
+      border-radius: 10px;
+    }
+
+    &:before {
+      transform: translate(-40%, -100%) rotate(-45deg);
+    }
+
+    &:after {
+      transform: translate(-40%, -100%) rotate(45deg);
+    }
+
+    &:focus,
+    &:hover {
+      transform: scale(1.1);
+
+      &:before,
+      &:after {
+        background: $white-color;
+      }
+    }
+
+    &:active {
+      transform: scale(0.9);
+
+      &:before,
+      &:after {
+        background: $coral-red-color;
+      }
+    }
+  }
+
+
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: center;
+}

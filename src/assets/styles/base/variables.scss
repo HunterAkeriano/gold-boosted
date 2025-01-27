@@ -1,0 +1,104 @@
+$max-width: 1920;
+$min-width: 320;
+$max-width-container: 1556;
+
+$main-font: 'Inter';
+$main-weight: 400;
+
+$black-color: #000000;
+$midnight-color: #262638;
+$dark-blue-color: #2b2b3d;
+$navy-blue-color: #33364d;
+$midnight-blue-color: #2b2d3f;
+$blue-gray-color: #3b3d59;
+$dark-gray-blue-color: #3b3d54;
+$deep-blue-color: #3d3d59;
+$dark-indigo-color: #36384f;
+$dark-midnight-blue-color: #3c3e54;
+$deep-midnight-blue-color: #34364b;
+$dark-navy-color: #2b2e3d;
+$coral-red-color: #eb5757;
+$dark-blue-gray-color: #3c3e5a;
+$dark-slate-color: #404259;
+$dark-slate-gray-color: #35384e;
+$slate-blue-color: #42455e;
+$deep-blue-gray-color: #424461;
+$deep-slate-color: #424561;
+$dark-slate-gray-color-2: #6b6c79;
+$olive-color: #54523b;
+$goldenrod-color: #ffc21c;
+$amber-color: #ffbd00;
+$fee-yellow: #fee229;
+$yellow-color: #ffe329;
+$mint-color: #2ed178;
+$green-color: #2ea62e;
+$vibrant-green-color: #26ad61;
+$silver-color: #858585;
+$light-gray-color: #d9d9d9;
+$lighter-gray-color: #dedede;
+$gray-color: #cacbcf;
+$white-color: #ffffff;
+$cornflower-blue: #2f80ed;
+$jungle-green: #2ed177;
+$dark-gunmetal: #252738;
+$color-666: #666;
+$light-gray-2: #d6d6d6;
+$charcoal-color: #363636;
+$light-gray-3-color: #ccc;
+$dark-slate-blue-color: #40425a;
+
+$midnight-gradient: linear-gradient(
+  180deg,
+  rgba(43, 45, 63, 0.9) 8.59%,
+  #2b2d3f 98.36%,
+  #2a2c3d 115.82%
+);
+$default-gradient-color: linear-gradient(93deg, #ffbc19 -3.34%, #fee92c 102.31%);
+$gold-gradient-color: linear-gradient(93deg, #eca700 46.63%, #fcea4c 94.69%);
+$dark-slate-gray-gradient-color: linear-gradient(
+  180deg,
+  rgba(53, 56, 78, 0) 34.01%,
+  rgba(53, 56, 78, 0.5) 56.95%,
+  $dark-slate-gray-color 94.28%
+);
+$product-gradient-color: linear-gradient(
+  180deg,
+  rgba(52, 54, 75, 0) 75.85%,
+  rgba(52, 54, 75, 0.78) 86.75%,
+  $deep-midnight-blue-color 96.75%
+);
+$slate-blue-gradient-color: linear-gradient(180deg, #35384e 5.58%, #2b2d3f 89.8%);
+$slate-midnight-gradient-color: linear-gradient(
+  180deg,
+  #2b2d3f 37.35%,
+  rgba(43, 45, 63, 0.9) 61.41%,
+  #2b2d3f 101.51%
+);
+
+$white-fade-gradient-color: linear-gradient(
+                90deg,
+                rgba(255, 255, 255, 0) 0%,
+                rgba(255, 255, 255, 1) 50%,
+                rgba(255, 255, 255, 0) 100%
+);
+
+$dark-ocean-depth-gradient-color:linear-gradient(
+180deg,
+rgba(43, 45, 63, 0.9) 8.59%,
+                          #2b2d3f 87.86%,
+                                       #2a2c3d 130.79%
+);
+
+$golden-sunrise-gradient-color: linear-gradient(93.03deg, #FFBC19 -3.34%, #FEE92C 102.31%);
+
+$circle-shadow: 0 5px 15px 0 rgba(255, 188, 0, 0.3);
+$circle-hover-shadow: 0 10px 20px 0 rgb(0 0 0 / 20%);
+
+$focus-color: #ccc;
+$inherit-color: inherit;
+$transparent-color: transparent;
+
+$font-family: $main-font, sans-serif;
+$font-color: $white-color;
+$font-size: 14;
+$font-weight: $main-weight;

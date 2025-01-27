@@ -1,0 +1,24 @@
+@import "@/assets/styles/base/mixins";
+
+.input-block {
+  display: flex;
+  column-gap: 10px;
+
+  &__input {
+    min-width: 290px;
+    max-width: 522px;
+    height: 50px;
+    width: 100%;
+  }
+
+  &__button{
+    height: 50px;
+    min-width: 148px;
+    max-width: 148px;
+    width: 100%;
+
+    @include media-breakpoint-down(xs){
+      max-width: none;
+    }
+  }
+}

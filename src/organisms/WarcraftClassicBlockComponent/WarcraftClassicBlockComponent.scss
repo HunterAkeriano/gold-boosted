@@ -1,0 +1,11 @@
+@import '@/assets/styles/base/mixins';
+
+.warcraft-classic-section {
+  padding-top: 64px;
+  padding-bottom: 55px;
+
+  @include media-breakpoint-down(sm) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}

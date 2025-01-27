@@ -1,0 +1,100 @@
+@use 'sass:map';
+
+$breakpoints: (
+  uxs: 330px,
+  xxs: 375px,
+  xs: 576px,
+  sm: 768px,
+  smm: 868px,
+  md: 1024px,
+  mdd: 1150px,
+  lg: 1420px,
+  l: 1650px,
+  xl: 1920px
+);
+
+@mixin media-breakpoint-up($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    $breakpoint-value: map.get($breakpoints, $breakpoint);
+
+    @media (min-width: $breakpoint-value) {
+      @content;
+    }
+  } @else {
+    @warn 'Invalid breakpoint: #{$breakpoint}.';
+  }
+}
+
+@mixin media-breakpoint-down($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    $breakpoint-value: map.get($breakpoints, $breakpoint);
+
+    @media (max-width: $breakpoint-value - 1) {
+      @content;
+    }
+  } @else {
+    @warn 'Invalid breakpoint: #{$breakpoint}.';
+  }
+}
+
+@mixin discount {
+  padding: 4px 7px;
+  border-radius: 50px;
+  background: $fee-yellow;
+  font-family: $font-family;
+  color: $deep-midnight-blue-color;
+  font-size: 16px;
+  font-weight: 500;
+
+  &:before {
+    content: '-';
+  }
+
+  &:after {
+    content: '%';
+  }
+}
+
+@mixin page-title{
+    color: $white-color;
+    font-family: $font-family;
+    font-size: 32px;
+    font-weight: 600;
+
+    @include media-breakpoint-down(xs) {
+      font-size: 20px;
+    }
+}
+
+@mixin section-title{
+  color: $white-color;
+  font-family: $font-family;
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+
+  @include media-breakpoint-down(xxs) {
+    font-size: 20px;
+    letter-spacing: 1px;
+    line-height: 1.3;
+  }
+}
+
+@mixin single-line-truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin multi-line-truncate($line-height, $max-lines) {
+  word-break: break-word;
+  overflow: hidden;
+  line-height: $line-height;
+  max-height: $line-height * $max-lines;
+  display: block;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: $max-lines;
+}

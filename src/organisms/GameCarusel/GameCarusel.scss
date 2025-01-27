@@ -1,0 +1,15 @@
+@import '@/assets/styles/base/mixins';
+
+.game-carusel {
+  padding-top: 55px;
+  padding-bottom: 55px;
+  overflow: hidden;
+
+  &__desktop{
+    .cards-filter-block__main.cards-products-embla.embla{
+      @include media-breakpoint-down(xxs){
+        display: none;
+      }
+    }
+  }
+}

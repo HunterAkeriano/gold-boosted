@@ -1,0 +1,19 @@
+@import "@/assets/styles/base/mixins";
+@import "@/assets/styles/base/variables";
+
+.worth {
+
+  &__title{
+    @include section-title();
+  }
+
+  &__slider{
+    margin-top: 40px;
+
+    &-container{
+gap: 20px;
+    }
+
+
+  }
+}

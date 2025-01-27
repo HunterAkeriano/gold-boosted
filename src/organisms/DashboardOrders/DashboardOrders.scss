@@ -1,0 +1,239 @@
+@import '@/assets/styles/base/variables';
+@import '@/assets/styles/base/mixins';
+
+.dashboard-orders{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.order {
+ &__list-single-orders{
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   flex-wrap: wrap;
+   justify-content: center;
+   gap: 20px;
+
+   @include media-breakpoint-down(md){
+     grid-template-columns: repeat(3, 1fr);
+   }
+
+   @include media-breakpoint-down(sm){
+     grid-template-columns: repeat(2, 1fr);
+   }
+
+   @include media-breakpoint-down(xs){
+     grid-template-columns: repeat(1, 1fr);
+   }
+ }
+
+ &__total{
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   background: rgba($color: black, $alpha: 0.2);
+   padding: 10px;
+   @include media-breakpoint-down(xs){
+     flex-direction: column;
+     row-gap: 10px;
+   }
+
+   &-date{
+     display: flex;
+     gap: 5px;
+     align-items: center;
+
+     &-title{
+       font-family: 'Inter';
+       font-weight: 400;
+       font-size: 16px;
+       color: rgba(255, 255, 255, 0.5);
+     }
+
+     &-value{
+       font-family: 'Inter';
+       font-weight: 600;
+       font-size: 16px;
+       line-height: 100%;
+       color: #FFFFFF;
+     }
+   }
+
+   &-price{
+     display: flex;
+     gap: 5px;
+     align-items: center;
+
+     &-title{
+       font-family: 'Inter';
+       font-weight: 600;
+       font-size: 16px;
+       text-transform: uppercase;
+       color: #FFFFFF;
+     }
+
+     &-value{
+       font-family: 'Inter';
+       font-weight: 600;
+       font-size: 20px;
+       color: #FEE229;
+     }
+   }
+ }
+
+ &__header{
+   padding: 10px;
+   border-radius: 5px;
+   overflow: hidden;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+
+   &-status_canceled{
+     color:  red;
+   }
+
+   &-status_completed{
+     color:  green;
+   }
+
+   background: #34364B;
+   &-item{
+     display: flex;
+     gap: 5px;
+
+     &-title{
+       font-family: $font-family;
+       font-weight: 400;
+       font-size: 16px;
+       color: rgba($color: $white-color, $alpha: 50%);
+     }
+
+     &-value{
+       font-family: $font-family;
+       font-weight: 400;
+       font-size: 16px;
+       color: rgba($color: $white-color, $alpha: 50%);
+
+
+     }
+   }
+
+  &-progress-value{
+    width: 111px;
+  }
+
+   &-price{
+     font-family: $font-family;
+     font-weight: 600;
+     font-size: 16px;
+     color: #FEE229;
+   }
+
+   &-repeat-button{
+     margin-left: auto;
+     margin-right: 20px;
+     max-width: 30px;
+     max-height: 30px;
+     width: 100%;
+     height: 100%;
+     padding: 0;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     min-height: 30px;
+     min-width: 30px;
+   }
+
+   &-info{
+     display: flex;
+     justify-content: space-between;
+     gap: 20px;
+     width: 50%;
+   }
+
+   &-infos{
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     flex: 100%;
+
+     @include media-breakpoint-down(xs){
+       flex-direction: column;
+       align-items: flex-start;
+       gap: 10px;
+     }
+   }
+
+   &-status{
+     margin-right: 20px;
+
+     &_progress{
+       font-family: $font-family;
+       font-weight: 500;
+       font-size: 14px;
+       line-height: 1.3;
+       letter-spacing: 0.05em;
+       text-transform: uppercase;
+       color: #2F80ED;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       gap: 5px;
+
+
+       @include media-breakpoint-down(xs){
+         flex-direction: row-reverse;
+       }
+     }
+   }
+
+   &-repeat-icon{
+     max-width: 16px;
+     max-height: 16px;
+     width: 100%;
+     height: 100%;
+   }
+
+   &-arrow{
+
+     &-icon{
+       max-width: 26px;
+       max-height: 26px;
+       width: 100%;
+       height: 100%;
+     }
+   }
+ }
+
+  &__body{
+    margin-top: 10px;
+    background: #34364B;
+    border-radius: 5px;
+    padding: 10px;
+  }
+
+  .accordion__header{
+    .order__header-arrow{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: fit-content;
+      height: fit-content;
+      transform: rotate(180deg);
+    }
+
+    &.open{
+      .order__header-arrow{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: fit-content;
+        height: fit-content;
+        transform: rotate(0deg);
+      }
+    }
+  }
+}
+

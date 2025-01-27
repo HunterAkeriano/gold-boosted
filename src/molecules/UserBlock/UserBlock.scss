@@ -1,0 +1,78 @@
+@import '@/assets/styles/base/mixins';
+
+.user-block {
+  display: flex;
+  margin-left: 66px;
+  position: relative;
+
+  &__points-block{
+    position: absolute;
+    display: flex;
+    padding: 15px 10px;
+    align-items: center;
+    gap: 5px;
+    background: #424461;
+    border-radius: 50px;
+    left: -60%;
+
+    @include media-breakpoint-down(sm){
+      position: static;
+    }
+  }
+
+  &__points-value{
+    font-family: 'Inter';
+    font-weight: 500;
+    font-size: 16px;
+    color: #FFFFFF;
+  }
+
+  &__points-icon{
+    width: 20px;
+    height: 20px;
+  }
+
+  .button_circle{
+    padding: 14px;
+  }
+
+  &__search-template{
+    width: 50px;
+    height: 50px;
+    margin-left: 15px;
+  }
+
+  @include media-breakpoint-down(lg) {
+    margin-left: 10px;
+  }
+
+  @include media-breakpoint-down(md) {
+    margin-left: 0;
+  }
+
+  .button:not(:first-child) {
+    &:last-child {
+      margin-left: 22px;
+      @include media-breakpoint-down(lg) {
+        margin-left: 10px;
+      }
+
+      @include media-breakpoint-down(sm) {
+        margin-left: 0;
+      }
+    }
+
+    &.button_circle {
+      margin-left: 15px;
+
+
+      @include media-breakpoint-down(lg) {
+        margin-left: 10px;
+      }
+
+      @include media-breakpoint-down(sm) {
+        margin-left: 0;
+      }
+    }
+  }
+}

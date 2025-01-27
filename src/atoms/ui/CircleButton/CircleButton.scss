@@ -1,0 +1,18 @@
+@import '@/assets/styles/components/atoms/ui/button';
+
+.circle-button {
+  background: $default-gradient-color;
+  box-shadow: $circle-shadow;
+  transition:
+    background 0.3s,
+    box-shadow 0.3s;
+
+  &:hover {
+    background: $default-gradient-color;
+    box-shadow: $circle-hover-shadow;
+  }
+
+  &:active {
+    background: $gold-gradient-color;
+  }
+}

@@ -1,0 +1,7 @@
+.user-characters {
+  &__character {
+    &:not(:first-child) {
+      margin-top: 40px;
+    }
+  }
+}

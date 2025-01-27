@@ -1,0 +1,54 @@
+@import "@/assets/styles/base/variables";
+@import "@/assets/styles/base/mixins";
+
+.basket-product-order{
+  display: inline-flex;
+
+  background: rgba($color: $dark-gray-blue-color, $alpha: 50%);
+  padding: 5px;
+  border-radius: 5px;
+  flex-wrap: wrap;
+
+  &:not(:first-child){
+    margin-top: 10px;
+  }
+
+  &__total{
+    margin-top: 10px;
+    background: $dark-gray-blue-color;
+    width: 100%;
+
+    &-price{
+      display: flex;
+      align-items: center;
+      gap: 5px;
+
+      &-title{
+        font-family: $font-family;
+        font-weight: 600;
+        font-size: 18px;
+        text-transform: uppercase;
+        color: $white-color;
+      }
+
+      &-current{
+        font-family: $font-family;
+        font-weight: 600;
+        font-size: 22px;
+        color: $fee-yellow;
+      }
+
+      &-last{
+        font-family: $font-family;
+        font-weight: 500;
+        font-size: 14px;
+        text-decoration-line: line-through;
+        color: rgba($color: $white-color, $alpha: 30%);
+      }
+
+      &-discount{
+        @include discount;
+      }
+    }
+  }
+}

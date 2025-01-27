@@ -1,0 +1,29 @@
+@import '@/assets/styles/base/mixins';
+@import '@/assets/styles/base/variables';
+
+.promo-block {
+  position: relative;
+  max-width: 471px;
+  width: 100%;
+
+  &__promo-active{
+    position: absolute;
+    font-family: $font-family;
+    font-weight: 500;
+    font-size: 16px;
+    color: #2ED177;
+    margin-top: 20px;
+  }
+
+  .input-block {
+    &__button {
+      max-width: 180px;
+      width: 100%;
+    }
+
+    @include media-breakpoint-down(xxs) {
+      flex-direction: column;
+      row-gap: 15px;
+    }
+  }
+}

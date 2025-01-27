@@ -1,0 +1,33 @@
+@import '@/assets/styles/base/variables';
+
+.search-input{
+  position: relative;
+  max-width: 635px;
+  width: 100%;
+
+  &__options-list{
+    overflow: hidden;
+    width: 100%;
+    position: absolute;
+    background-color: $deep-blue-gray-color;
+    z-index: 5;
+    border-radius: 5px;
+  }
+
+  &__option{
+    color: $white-color;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:not(:first-child){
+      border-top: 1px solid rgba($color: $white-color, $alpha: 10%);
+    }
+
+    &:hover {
+      background-color: $dark-blue-gray-color;
+    }
+  }
+}

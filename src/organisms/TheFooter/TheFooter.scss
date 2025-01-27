@@ -1,0 +1,222 @@
+@import '@/assets/styles/base/mixins';
+@import '@/assets/styles/base/variables';
+
+.footer {
+  background: $midnight-blue-color;
+  margin-top: auto;
+  padding-bottom: 20px;
+
+  &__locations {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 40px;
+    column-gap: 15px;
+    row-gap: 13px;
+
+    &-icon {
+      width: 100%;
+      height: 100%;
+    }
+
+    &-icon-block {
+      width: 16px;
+      height: 16px;
+    }
+
+    @include media-breakpoint-down(md) {
+      margin-top: 35px;
+    }
+
+    @include media-breakpoint-down(xxs) {
+      flex-direction: column;
+    }
+
+    &-title {
+      display: flex;
+      align-items: center;
+      color: rgba($color: $white-color, $alpha: 50%);
+      font-family: $font-family;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.35;
+      column-gap: 5px;
+
+      &:after {
+        content: ':';
+      }
+
+      svg {
+        fill: rgba($color: $white-color, $alpha: 50%);
+        max-width: 16px;
+        max-height: 16px;
+        width: 100%;
+        height: 100%;
+        margin-right: 8px;
+        margin-left: 1px;
+      }
+    }
+
+    &-item {
+
+      &-link{
+        &_skeletor{
+          max-width: 190px;
+          max-height: 16px;
+          min-width: 166px;
+          min-height: 14px;
+        }
+      }
+
+
+      &:first-child {
+        margin-top: 2px;
+      }
+
+      &:not(:first-child) {
+        margin-top: 10px;
+      }
+    }
+  }
+
+  &__all-rights {
+    text-align: center;
+    margin-top: 20px;
+    color: rgba($color: $white-color, $alpha: 30%);
+    font-family: $font-family;
+    font-size: 14px;
+    font-weight: 400;
+
+    &_skeletor{
+      max-width: 179px;
+      max-height: 14px;
+      min-width: 154px;
+      min-height: 12px;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+    }
+  }
+
+  .logo {
+    max-width: 130px;
+    width: fit-content;
+    margin-bottom: 20px;
+    grid-area: logo;
+    display: block;
+
+    @include media-breakpoint-down(md) {
+      margin-bottom: 15px;
+    }
+
+    picture {
+      max-width: 135px;
+      max-height: 27px;
+    }
+  }
+
+  &__inner {
+    padding-top: 40px;
+    padding-bottom: 38px;
+    display: grid;
+    grid-template:
+      'logo logo'
+      'info nav'
+      'info discount' auto/minmax(200px, 470px) auto;
+    column-gap: 30px;
+
+    @include media-breakpoint-down(md) {
+      grid-template:
+        'logo'
+        'info'
+        'nav'
+        'discount';
+    }
+  }
+
+  &__info-block {
+    grid-area: info;
+    max-width: 384px;
+
+    @include media-breakpoint-down(md) {
+      max-width: none;
+    }
+  }
+
+  &__info-text {
+    color: rgba($color: $white-color, $alpha: 30%);
+    font-family: $font-family;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.35;
+
+    &_skeletor{
+      min-height: 128px;
+      max-height: 133px;
+      min-width: 290px;
+      max-width: 384px;
+      border-radius: 5px;
+    }
+  }
+
+  &__discount-block {
+    margin-top: 77px;
+    grid-area: discount;
+  }
+}
+
+.footer-nav {
+  display: flex;
+  grid-area: nav;
+  justify-content: space-between;
+  width: 100%;
+  column-gap: 20px;
+
+  @include media-breakpoint-down(md) {
+    justify-content: flex-start;
+    column-gap: 70px;
+  }
+
+  @include media-breakpoint-down(md) {
+    flex-wrap: wrap;
+    margin-top: 35px;
+    row-gap: 35px;
+    column-gap: 35px;
+  }
+
+  &__item {
+    &-list {
+      margin-top: 25px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-link {
+      &_skeletor{
+        width: 100%;
+        min-width: 80px;
+        height: 18px;
+
+        &:not(:first-child) {
+          margin-top: 16px;
+        }
+      }
+
+      &:not(:first-child) {
+        margin-top: 16px;
+      }
+    }
+
+    &-title {
+      color: rgba($color: $white-color, $alpha: 30%);
+      font-family: $font-family;
+      font-size: 16px;
+      font-weight: 500;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+
+      &:after {
+        content: ':';
+      }
+    }
+  }
+}

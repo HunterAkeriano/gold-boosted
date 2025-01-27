@@ -1,0 +1,31 @@
+.multi-order-block{
+  position: relative;
+}
+
+.multi-order {
+  background: rgba($color: gray, $alpha: 0.2);
+  overflow: hidden;
+  padding: 10px;
+  border-radius: 5px;
+
+  &:not(:first-child){
+    margin-top: 10px;
+  }
+
+  &__total{
+    margin-top: 10px;
+    background: rgba($color: black, $alpha: 0.2);
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  &__container {
+    gap: 10px;
+  }
+
+  .single-order__price{
+    margin-top: 10px;
+  }
+}
+
+

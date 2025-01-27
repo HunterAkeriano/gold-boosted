@@ -1,0 +1,54 @@
+@import '@/assets/styles/base/variables';
+
+.level-dropdown {
+
+  &__price {
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 16px;
+    color: rgba($color: $white-color, $alpha: 70%);
+
+    &_selected {
+      margin-left: auto;
+      color: rgba($color: $white-color, $alpha: 100%);
+    }
+  }
+
+  &__name {
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 16px;
+    color: rgba($color: $white-color, $alpha: 70%);
+
+    &_selected {
+      color: rgba($color: $white-color, $alpha: 100%);
+    }
+  }
+
+  &__option {
+    display: flex;
+    justify-content: space-between;
+    padding: 12.5px 18px;
+    cursor: pointer;
+
+    &:hover {
+      background: $dark-blue-gray-color;
+    }
+
+    &_select {
+      background: $dark-blue-gray-color;
+
+      .level-dropdown__name {
+        color: $white-color;
+      }
+
+      .level-dropdown__price {
+        color: $white-color;
+      }
+    }
+  }
+
+  .dropdown__selected-option {
+    padding: 17px 18px;
+  }
+}

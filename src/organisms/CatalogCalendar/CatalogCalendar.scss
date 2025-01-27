@@ -1,0 +1,115 @@
+@import '@/assets/styles/base/variables';
+@import '@/assets/styles/base/mixins';
+
+.catalog-calendar {
+
+
+  &__title{
+    @include section-title();
+  }
+
+  &__event-header {
+    padding-top: 60px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba($color: $white-color, $alpha: 10%);
+  }
+
+  &__event-title {
+    color: $white-color;
+    font-family: $font-family;
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  &__event-description {
+    margin-top: 15px;
+    color: rgba($color: $white-color, $alpha: 50%);
+    font-family: $font-family;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.35;
+  }
+
+  &__event-slider {
+    margin-top: 40px;
+
+    &-container{
+      gap: 20px;
+    }
+  }
+
+  &__event-item {
+    width: fit-content;
+    max-width: 265px;
+
+    &-date {
+      color: $white-color;
+      font-family: $font-family;
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    &-line {
+      color: rgba($color: $white-color, $alpha: 20%);
+    }
+
+    &-day {
+      color: rgba($color: $white-color, $alpha: 30%);
+      font-family: $font-family;
+      font-size: 16px;
+      font-weight: 400;
+    }
+
+    &-header {
+      display: flex;
+      justify-content: space-between;
+      color: $white-color;
+    }
+
+    &-cards-list {
+      margin-top: 25px;
+      width: fit-content;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 5px;
+    }
+
+    &-card {
+      width: fit-content;
+      padding: 15px 31px;
+      border-radius: 5px;
+      background: $deep-midnight-blue-color;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      row-gap: 21px;
+    }
+
+    &-times {
+      display: flex;
+      flex-direction: column;
+      row-gap: 15px;
+      color: rgba($color: $white-color, $alpha: 70%);
+    }
+
+    &-start-time {
+      display: flex;
+      align-items: center;
+      column-gap: 10px;
+    }
+
+    &-end-time {
+      display: flex;
+      align-items: center;
+      column-gap: 10px;
+    }
+
+    &-image-block {
+      max-width: 46px;
+      max-height: 46px;
+      height: fit-content;
+      width: fit-content;
+    }
+  }
+}

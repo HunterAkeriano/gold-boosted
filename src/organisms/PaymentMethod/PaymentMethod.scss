@@ -1,0 +1,12 @@
+@import '@/assets/styles/base/variables';
+
+.payment-method {
+  max-width: 580px;
+  padding-top: 45px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid rgba($color: $white-color, $alpha: 10%);
+
+  &__payments-list {
+    margin-top: 30px;
+  }
+}

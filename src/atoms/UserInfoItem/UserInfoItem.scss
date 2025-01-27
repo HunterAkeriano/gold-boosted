@@ -1,0 +1,33 @@
+@import "@/assets/styles/base/variables";
+
+.user-info__item{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  min-width: 20%;
+
+  &-title{
+    min-width: 39px;
+    min-height: 14px;
+    max-width: 290px;
+    max-height: 14px;
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 14px;
+    color: rgba($color: $white-color, $alpha: 30%);
+    height: 14px;
+  }
+
+  &-value{
+    min-width: 39px;
+    min-height: 16px;
+    max-height: 16px;
+    max-width: 290px;
+    font-family: $font-family;
+    font-weight: 600;
+    font-size: 16px;
+    color: rgba($color: $white-color, $alpha: 60%);
+
+
+  }
+}

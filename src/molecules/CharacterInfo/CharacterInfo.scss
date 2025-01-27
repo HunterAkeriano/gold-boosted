@@ -1,0 +1,100 @@
+@import '@/assets/styles/base/variables';
+@import '@/assets/styles/base/mixins';
+
+.character-block {
+  max-width: 580px;
+  display: grid;
+  grid-template:
+    'battleTag class'
+    'character-name faction'
+    'realm additional'
+    'button button';
+  column-gap: 20px;
+  row-gap: 15px;
+
+  @include media-breakpoint-down(xs) {
+    grid-template:"battleTag"
+    "character-name"
+    "realm"
+    "class"
+    "faction"
+    "additional"
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    &-label {
+      margin-top: 0;
+      color: rgba($color: $white-color, $alpha: 50%);
+      font-family: $font-family;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: color 0.3s;
+      min-height: 70px;
+      border-radius: 2px;
+
+      &:hover {
+        color: $white-color;
+      }
+
+      &:focus-within {
+        color: $white-color;
+      }
+    }
+
+    &-input {
+      margin-top: 10px;
+      border-radius: 0;
+
+      &:not(:first-child) {
+        margin-top: 15px;
+        max-height: 65px;
+      }
+    }
+
+    &-battleTag {
+      grid-area: battleTag;
+    }
+
+    &-class {
+      grid-area: class;
+    }
+
+    &-character-name {
+      grid-area: character-name;
+    }
+
+    &-faction {
+      grid-area: faction;
+    }
+
+    &-realm {
+      grid-area: realm;
+    }
+
+    &-additional {
+      grid-area: additional;
+    }
+
+    &-button {
+      grid-area: button;
+
+      .character-block__item-button-delete {
+        background: $coral-red-color;
+        box-shadow: none;
+
+        &:active,
+        &:focus,
+        &:hover {
+          background: $coral-red-color;
+        }
+      }
+    }
+  }
+}

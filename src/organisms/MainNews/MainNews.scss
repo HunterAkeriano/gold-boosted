@@ -1,0 +1,66 @@
+@import '@/assets/styles/base/mixins';
+@import '@/assets/styles/base/variables';
+
+.latest-news {
+  padding-bottom: 69px;
+  padding-top: 55px;
+  overflow: hidden;
+
+  @include media-breakpoint-down(sm) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  &__pagination{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 45px;
+
+    @include media-breakpoint-down(xxs){
+      display: none;
+    }
+
+    &-mobile{
+      display: none;
+
+      @include media-breakpoint-down(xxs){
+        display: block;
+      }
+    }
+  }
+
+  &__title{
+    @include section-title();
+  }
+
+  &__embla {
+    margin-top: 40px;
+
+    &-container{
+      column-gap: 20px;
+
+      @include media-breakpoint-down(xxs) {
+        display: none;
+      }
+    }
+
+    &-slide{
+      @include media-breakpoint-up(xs) {
+        max-width: 380px;
+      }
+    }
+
+    @include media-breakpoint-down(sm) {
+      margin-top: 30px;
+    }
+  }
+
+  &__mobile-list{
+    display: none;
+
+    @include media-breakpoint-down(xxs){
+      display: grid;
+      row-gap: 30px;
+    }
+  }
+}

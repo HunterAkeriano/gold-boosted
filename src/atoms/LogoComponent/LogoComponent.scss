@@ -1,0 +1,15 @@
+@import '@/assets/styles/base/mixins';
+
+.logo {
+  &__img {
+    display: block;
+    max-width: 150px;
+    max-height: 30px;
+    min-width: 104px;
+    min-height: 20px;
+
+    @include media-breakpoint-down(xs) {
+      max-width: 104px;
+    }
+  }
+}

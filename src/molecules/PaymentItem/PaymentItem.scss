@@ -1,0 +1,47 @@
+@import '@/assets/styles/base/variables';
+@import '@/assets/styles/base/mixins';
+
+.payment-item {
+  min-height: 50px;
+  max-height: 50px;
+  min-width: 111px;
+  max-width: 140px;
+  border-radius: 2px;
+  height: 50px;
+
+  .radio-container {
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 2px;
+    width: 111px;
+    height: 50px;
+    align-items: center;
+    background: $dark-slate-gray-color;
+    padding: 0 15px;
+
+    .radio-custom {
+      width: 14px;
+      height: 14px;
+      min-height: 14px;
+      min-width: 14px;
+    }
+
+    @include media-breakpoint-down(xs) {
+      width: 140px;
+    }
+  }
+
+  .radio-component__label{
+    max-height: 54px;
+    max-width: 54px;
+    width: 100%;
+    height: 100%;
+
+    svg{
+      max-height: 54px;
+      max-width: 54px;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

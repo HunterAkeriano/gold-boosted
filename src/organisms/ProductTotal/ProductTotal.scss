@@ -1,0 +1,182 @@
+@import '@/assets/styles/base/variables';
+@import '@/assets/styles/base/mixins';
+
+.product-total {
+
+  border-radius: 5px;
+  background: $deep-midnight-blue-color;
+  max-width: 280px;
+  width: 100%;
+
+  @include media-breakpoint-down(sm) {
+    max-width: none;
+  }
+
+  &__sale {
+    padding: 12px 20px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba($color: $white-color, $alpha: 5%);
+
+    &-title {
+      font-family: $font-family;
+      font-weight: 500;
+      font-size: 14px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: rgba($color: $white-color, $alpha: 50%);
+
+      &_skeletor{
+        width: 37px;
+        height: 24px;
+      }
+    }
+
+    &-period {
+      font-family: $font-family;
+      font-weight: 500;
+      font-size: 14px;
+      color: $fee-yellow;
+
+      &_skeletor{
+        width: 100px;
+        height: 24px;
+      }
+    }
+
+    &-discount{
+      @include discount;
+
+      &_skeletor{
+        width: 52px;
+        height: 24px;
+      }
+    }
+  }
+
+  &__inner {
+    padding: 20px;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+
+    &-title {
+      font-family: $font-family;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 1.35;
+      color: $white-color;
+
+      &_skeletor{
+        width: 38px;
+        height: 19px;
+      }
+    }
+
+    &-value {
+      display: flex;
+      column-gap: 5px;
+      align-items: baseline;
+
+      &_skeletor{
+        width: 38px;
+        height: 19px;
+        margin-left: auto;
+        margin-right: 10px;
+      }
+
+      &-total {
+        font-family: $font-family;
+        font-weight: 500;
+        font-size: 22px;
+        color: $fee-yellow;
+      }
+
+      &-last {
+        font-family: $font-family;
+        font-weight: 500;
+        font-size: 14px;
+        text-decoration-line: line-through;
+        color: rgba($color: $white-color, $alpha: 50%);
+      }
+    }
+  }
+
+  &__bonus {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-title {
+      font-family: $font-family;
+      font-weight: 500;
+      font-size: 14px;
+      color: $white-color;
+    }
+
+    &-value {
+      font-family: $font-family;
+      font-weight: 500;
+      font-size: 16px;
+      color: $white-color;
+      display: flex;
+      align-items: center;
+      column-gap: 10px;
+    }
+  }
+
+  &__quantity {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba($color: $white-color, $alpha: 5%);
+    padding-top: 20px;
+    margin-top: 20px;
+
+    &-title {
+      font-family: $font-family;
+      font-weight: 500;
+      font-size: 14px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: rgba($color: $white-color, $alpha: 50%);
+    }
+
+    &-input {
+      background: $deep-blue-gray-color;
+      font-family: $font-family;
+      font-weight: 600;
+      font-size: 16px;
+      color: $white-color;
+      width: 50px;
+      height: 30px;
+      text-align: right;
+    }
+  }
+
+  &__button {
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  &__payments{
+      margin-top: 8px;
+      display: flex;
+      width: 100%;
+      column-gap: 18px;
+      justify-content: space-around;
+  }
+
+  &__payment{
+    fill: rgba($color: $white-color, $alpha: 30%);
+    max-width: 48px;
+    max-height: 50px;
+    width: 100%;
+    height: 100%;
+  }
+}

@@ -1,0 +1,125 @@
+.range-slider {
+  top: -3px;
+  padding-bottom: 22px;
+  position: relative;
+  z-index: 2;
+
+
+  &__list-value {
+    display: flex;
+    width: 100%;
+    position: relative;
+    top: -2px;
+    justify-content: space-between;
+  }
+
+  &__item {
+    width: 2px;
+    height: 6px;
+    background: #424461;
+    position: relative;
+    cursor: pointer;
+    z-index: -1;
+
+    &:last-child {
+      .range-slider__item-price {
+        transform: translate(calc(-100% + 10px));
+      }
+    }
+
+    &:first-child {
+      .range-slider__item-price {
+        transform: translate(-10px);
+      }
+    }
+
+    &-name {
+      width: fit-content;
+      position: absolute;
+      top: 16px;
+      transform: translate(calc(-50% + 1px));
+      color: #999aa5;
+    }
+
+    &-price {
+      position: absolute;
+      top: -25px;
+      left: 0;
+      transform: translate(-50%);
+      display: none;
+      color: #ffbd00;
+    }
+
+    &_select {
+      color: red;
+
+      .range-slider__item-price {
+        display: flex;
+        justify-content: center;
+      }
+
+      .range-slider__item-name {
+        color: #ffbd00;
+      }
+    }
+  }
+
+  input[type='range'] {
+    position: relative;
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+    width: 100%;
+  }
+
+  input[type='range']:focus {
+    outline: none;
+  }
+
+  input[type='range']::-webkit-slider-runnable-track {
+    background-color: #424461;
+    border-radius: 0rem;
+    height: 2px;
+  }
+
+  input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+
+    background-color: #ffbd00;
+    height: 1px;
+    width: 1px;
+    border-radius: 50%;
+    transform: scale(15);
+
+    &:before{
+      content: "s21323ss";
+      z-index: 20;
+    }
+  }
+
+  input[type='range']:focus::-webkit-slider-thumb {
+    outline: 0px solid #ffbd00;
+    outline-offset: 0.125rem;
+  }
+
+  input[type='range']::-moz-range-track {
+    background-color: #424461;
+    border-radius: 0rem;
+    height: 2px;
+  }
+
+  input[type='range']::-moz-range-thumb {
+    background-color: #ffbd00;
+    border: none;
+    border-radius: 0.5rem;
+    height: 1rem;
+    width: 1rem;
+  }
+
+  input[type='range']:focus::-moz-range-thumb {
+    outline: 3px solid #ffbd00;
+    outline-offset: 0.125rem;
+  }
+}

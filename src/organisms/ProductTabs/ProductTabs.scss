@@ -1,0 +1,29 @@
+@import '@/assets/styles/base/mixins';
+
+.product-tabs{
+
+  &__header{
+    display: flex;
+    column-gap: 50px;
+  }
+
+  &_skeletor{
+    width: 52px;
+    height: 34px;
+  }
+
+  &__tab{
+
+    &_skeletor {
+      display: block;
+      margin-top: 20px;
+      border-radius: 5px;
+      width: 100%;
+      height: 489px;
+
+      @include media-breakpoint-down(xs){
+        height: 633px;
+      }
+    }
+  }
+}

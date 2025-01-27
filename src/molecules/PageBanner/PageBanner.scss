@@ -1,0 +1,29 @@
+@import "@/assets/styles/base/variables";
+
+.banner {
+  width: 100%;
+  height: fit-content;
+  position: absolute;
+  overflow: hidden;
+  z-index: -1;
+  top: 0;
+  left: 0;
+
+  &:before {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    position: absolute;
+    background: $dark-ocean-depth-gradient-color;
+  }
+
+  &__background {
+    max-height: 683px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+}

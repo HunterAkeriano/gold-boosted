@@ -1,0 +1,88 @@
+@import '@/assets/styles/base/variables';
+@import '@/assets/styles/base/mixins';
+
+.form {
+  min-width: 373px;
+  padding: 15px 35px 35px;
+
+  @include media-breakpoint-down(xs) {
+    padding: 15px 0;
+    min-width: 0;
+  }
+
+  &__title {
+    color: $white-color;
+    font-family: $font-family;
+    font-size: 22px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  &__input {
+    width: 100%;
+  }
+
+  .input-component ~ .input-component {
+    margin-top: 15px;
+  }
+
+  &__checkbox {
+    margin-top: 21px;
+  }
+}
+
+.sign-in {
+  &__forgot-password-button {
+    display: block;
+    margin-top: 8px;
+    color: $white-color;
+    font-family: $font-family;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: left;
+  }
+
+  &__submit {
+    margin-top: 28px;
+    width: 100%;
+  }
+
+  &__sign-up-button {
+    margin-top: 19px;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    color: $white-color;
+    font-family: $font-family;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.7px;
+    text-transform: uppercase;
+  }
+
+  &__social {
+    text-align: center;
+    margin-top: 35px;
+
+    &-title {
+      color: rgba($color: $white-color, $alpha: 50%);
+      font-family: $font-family;
+      font-size: 14px;
+      font-weight: 400;
+    }
+
+    &-buttons {
+      width: fit-content;
+      margin-top: 20px;
+      margin-left: auto;
+      margin-right: auto;
+      display: flex;
+      column-gap: 10px;
+    }
+
+    &-button{
+      padding: 14px;
+    }
+  }
+}

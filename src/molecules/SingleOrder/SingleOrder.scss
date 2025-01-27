@@ -1,0 +1,121 @@
+
+
+.single-order{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  padding: 10px;
+  background: rgba($color: black, $alpha: 0.2);
+  border-radius: 5px;
+
+
+  &__image-block{
+    position: relative;
+    height: 155px;
+  }
+
+  &__icon-block{
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    max-width: 20px;
+    max-height: 20px;
+  }
+
+  &__image{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+  }
+
+  &__title{
+    margin-top: 20px;
+    font-family: 'Inter';
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 130%;
+    color: #FFFFFF;
+  }
+
+  &__sub-title{
+    margin-top: 10px;
+    font-family: 'Inter';
+    font-weight: 500;
+    font-size: 14px;
+    color: #FEE229;
+  }
+
+  &__attributes{
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  &__attribute{
+    display: flex;
+    justify-content: space-between;
+
+    &-title{
+      font-family: 'Inter';
+      font-weight: 400;
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    &-value{
+      font-family: 'Inter';
+      font-weight: 600;
+      font-size: 14px;
+      color: #FFFFFF;
+    }
+  }
+
+  &__total{
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-top: 25px;
+  }
+
+  &__quantity{
+    display: flex;
+    justify-content: space-between;
+
+    &-title{
+      font-family: 'Inter';
+      font-weight: 500;
+      font-size: 12px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.3);
+    }
+
+    &-value{
+      font-family: 'Inter';
+      font-weight: 600;
+      font-size: 14px;
+      color: #FFFFFF;
+    }
+  }
+
+  &__price{
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Inter';
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.3);
+
+    &-value{
+      font-family: 'Inter';
+      font-weight: 600;
+      font-size: 14px;
+      color: #FEE229;
+    }
+  }
+}

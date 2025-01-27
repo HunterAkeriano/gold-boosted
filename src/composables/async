@@ -1,0 +1,9 @@
+export const getData = async (getFunction, dataRef, loadingRef) => {
+  try {
+    const data = await getFunction()
+    dataRef.value = data
+    loadingRef.value = false
+  } catch (error) {
+    useToast().error(error)
+  }
+}

@@ -1,0 +1,16 @@
+@import '@/assets/styles/base/variables';
+
+.catalog-filter {
+  border-radius: 5px;
+  background: $deep-midnight-blue-color;
+  
+
+  .catalog-filter-accordion {
+
+    &:last-child {
+      .catalog-filter-accordion__header {
+        border-bottom: 0;
+      }
+    }
+  }
+}

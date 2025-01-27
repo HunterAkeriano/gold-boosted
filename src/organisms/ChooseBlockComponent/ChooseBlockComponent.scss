@@ -1,0 +1,42 @@
+@import '@/assets/styles/base/mixins';
+@import '@/assets/styles/base/variables';
+
+.choose-section {
+  padding-top: 55px;
+  padding-bottom: 55px;
+  overflow: hidden;
+
+  &__title{
+    @include section-title();
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  &__cards-list {
+    margin-top: 60px;
+
+    @include media-breakpoint-down(sm) {
+      margin-top: 30px;
+    }
+  }
+}
+
+.choose-section-embla {
+  &__container {
+    column-gap: 20px;
+
+    @include media-breakpoint-down(xxs) {
+      display: grid;
+      row-gap: 35px;
+    }
+  }
+
+  &__slide {
+    min-width: 290px;
+    max-width: 380px;
+    width: 100%;
+  }
+}

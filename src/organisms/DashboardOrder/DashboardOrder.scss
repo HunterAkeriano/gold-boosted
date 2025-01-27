@@ -1,0 +1,12 @@
+.dashboard-order-skeletor{
+  height: 50px;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.order__body{
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

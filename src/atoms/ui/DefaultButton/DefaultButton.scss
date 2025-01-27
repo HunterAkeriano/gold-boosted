@@ -1,0 +1,18 @@
+@import '@/assets/styles/components/atoms/ui/button';
+
+.default-button {
+  background: linear-gradient(93deg, #ffbc19 -3.34%, #fee92c 102.31%);
+  box-shadow: 0 5px 15px 0 rgb(255 188 0 / 30%);
+  transition:
+    background 0.3s,
+    box-shadow 0.3s;
+
+  &:hover {
+    background: linear-gradient(93deg, #ffbc19 -3.34%, #fee92c 102.31%);
+    box-shadow: 0 10px 20px 0 rgb(0 0 0 / 20%);
+  }
+
+  &:active {
+    background: linear-gradient(93deg, #eca700 46.63%, #fcea4c 94.69%);
+  }
+}

@@ -1,0 +1,41 @@
+@import '@/assets/styles/base/variables';
+
+.sign-up {
+  &__submit {
+    margin-top: 30px;
+    width: 100%;
+  }
+
+  &__checkbox-privacy {
+    margin-top: 26px;
+  }
+
+  &__checkbox-text {
+    display: block;
+    max-width: 275px;
+    color: rgba($color: $white-color, $alpha: 50%);
+    font-family: $font-family;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.35;
+
+    &-link {
+      display: inline;
+      color: $white-color;
+      font-size: 14px;
+    }
+  }
+
+  &__sign-in-button {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 17px;
+    color: $white-color;
+    font-family: $font-family;
+    font-size: 14px;
+    font-weight: 700;
+    word-spacing: -0.2px;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+  }
+}

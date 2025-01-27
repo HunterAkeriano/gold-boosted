@@ -1,0 +1,67 @@
+@import '@/assets/styles/base/mixins.scss';
+
+.hot-offers {
+  padding-top: 55px;
+  padding-bottom: 50px;
+  overflow: hidden;
+
+  .cards-filter-block__title-block{
+    width: fit-content;
+    max-width: 380px;
+    flex: 100%;
+  }
+
+  .cards-filter-block__header{
+    display: flex;
+    max-height: 34px;
+  }
+
+  .cards-filter-block__mobile-list{
+    display: none;
+
+    @include media-breakpoint-down(xxs){
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-top: 30px;
+    }
+  }
+
+  .cards-filter-block__main{
+    @include media-breakpoint-down(xxs){
+      display: none;
+    }
+  }
+
+  .cards-filter-block__filters-block.cards-filter-embla.embla{
+    margin-right: auto;
+    margin-left: 0;
+    flex: 100%;
+    overflow: hidden;
+    right: -15px;
+    padding-right: 15px;
+  }
+
+  .cards-filter-block__filter.embla__slide.cards-filter-embla__slide{
+    height: 34px;
+    width: 34px;
+    overflow: hidden;
+  }
+
+  .cards-filter-block__filter-icon_active{
+    opacity: 100%!important;
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  &__pagination {
+    margin-top: 30px;
+
+    @include media-breakpoint-down(xxs){
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,99 @@
+@import '@/assets/styles/base/variables';
+@import '@/assets/styles/base/mixins';
+
+.product-order-block {
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    row-gap: 15px;
+    width: 100%;
+
+    @include media-breakpoint-down(md) {
+      display: grid;
+      grid-template:
+        'bonus total'
+        'promo promo';
+    }
+
+    @include media-breakpoint-down(xxs) {
+      grid-template:
+        'bonus bonus'
+        'total total'
+        'promo promo';
+    }
+  }
+
+  &__promo {
+    grid-area: promo;
+  }
+
+  .bonus-points {
+    grid-area: bonus;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 0;
+
+    @include media-breakpoint-down(md) {
+      margin-left: 0;
+    }
+
+    &__title {
+      color: rgba($color: $white-color, $alpha: 50%);
+      font-family: $font-family;
+      font-size: 16px;
+      font-weight: 400;
+    }
+
+    &__icon {
+      margin-left: 16px;
+      width: 18.889px;
+      height: 20px;
+    }
+
+    &__value {
+      margin-left: 10px;
+      color: $white-color;
+      font-family: $font-family;
+      font-size: 16px;
+      font-weight: 600;
+    }
+  }
+
+  .total-price {
+    grid-area: total;
+    margin-left: 76px;
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+
+    @include media-breakpoint-down(md) {
+      margin-left: 20px;
+    }
+
+    @include media-breakpoint-down(xxs) {
+      margin-left: 0;
+    }
+
+    &__title {
+      margin-left: auto;
+      color: $white-color;
+      font-family: $font-family;
+      font-size: 18px;
+      font-weight: 600;
+      text-transform: uppercase;
+
+      @include media-breakpoint-down(xxs) {
+        margin-left: 0;
+      }
+    }
+
+    &__value {
+      color: $fee-yellow;
+      font-family: $font-family;
+      font-size: 22px;
+      font-weight: 600;
+    }
+  }
+}
